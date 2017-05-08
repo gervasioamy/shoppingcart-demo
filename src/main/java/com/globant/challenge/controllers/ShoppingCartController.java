@@ -1,4 +1,4 @@
-package com.globant.challenge.contrllers;
+package com.globant.challenge.controllers;
 
 import com.globant.challenge.domain.Item;
 import com.globant.challenge.domain.ShoppingCart;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * The main RESTFul controller that implements the following endpoints:
  * <ul>
  *     <li>POST   /carts : creates a cart</li>
  *     <li>GET    /carts/{cartId} : retrieves a cart</li>

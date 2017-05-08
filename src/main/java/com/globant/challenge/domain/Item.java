@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
+ * An item in the shopping cart.
+ *
  * @author gervasio.amy
  */
 @Entity

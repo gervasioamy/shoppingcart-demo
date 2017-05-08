@@ -3,6 +3,8 @@ package com.globant.challenge.domain;
 import java.math.BigDecimal;
 
 /**
+ * Article representation
+ *
  * @author gervasio.amy
  */
 public class Article {

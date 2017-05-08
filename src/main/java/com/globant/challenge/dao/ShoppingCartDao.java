@@ -5,7 +5,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by gamy on 5/2/17.
+ * @author gervasio.amy
  */
 @Repository
 public interface ShoppingCartDao extends PagingAndSortingRepository<ShoppingCart, Long> {

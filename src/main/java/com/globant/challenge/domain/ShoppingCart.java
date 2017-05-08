@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * The shopping cart.
+ * <i>Note: it might have more attributes, such as to which it users it belongs, when it was created, etc... but for
+ * this simple propouse this is enough</i>
+ *
  * @author gervasio.amy
  */
 @Entity

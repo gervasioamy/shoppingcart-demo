@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 /**
- *
+ * The service layer. Controllers should have to use the facade to deal with the domain.
  *
  * @author gervasio.amy
  */
@@ -68,10 +68,9 @@ public class ShoppingCartService {
     }
 
     public ShoppingCart addItemToCart(Long cartId, Item item) {
-        if (!isItemReferenceValid(item.getReference())) {
-            throw new InvalidItemReferenceException();
-        }
+        Article article = articlesDAO.fetchArticle(item.getReference()); // 404 is handled
         ShoppingCart cart = getCartFromDao(cartId);
+        // do something with the article if needed...
         cart.addItem(item);
         return dao.save(cart);
     }
@@ -86,6 +85,7 @@ public class ShoppingCartService {
 
     public void upadteItem(Long itemId, Item item) {
         item.setId(itemId);
+        // TODO improve by validating the article reference is not changed
         itemDao.save(item);
     }
 
@@ -95,6 +95,7 @@ public class ShoppingCartService {
         return cart;
     }
 
+    /* old non-restful approach
     private boolean isItemReferenceValid(String reference) {
         Article[] articles = articlesDAO.fetchArticles();
         Article art = Arrays.stream(articles).
@@ -103,5 +104,6 @@ public class ShoppingCartService {
                 orElseThrow(InvalidItemReferenceException::new);
         return art != null;
     }
+    */
 
 }

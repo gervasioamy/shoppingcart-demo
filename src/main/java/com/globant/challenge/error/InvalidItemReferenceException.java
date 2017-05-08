@@ -1,7 +1,9 @@
 package com.globant.challenge.error;
 
 /**
- * Created by gamy on 5/2/17.
+ * Thorw it when an item has an invalid article reference, for ex., when reaching the article reference retrieves a 404
+ *
+ * @author gervasio.amy.
  */
 public class InvalidItemReferenceException extends RuntimeException {
 }
